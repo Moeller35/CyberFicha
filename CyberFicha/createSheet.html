@@ -13,7 +13,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
             <img src="images/icon.jpg" width="40" height="40" class="d-inline-block align-top" alt="">
             CyberFicha
         </a>
@@ -46,20 +46,151 @@
         </div>
     </nav>
 
-    <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-default">Nome</span>
+    <div class="nomePersonagem">
+        <h4>NOME</h4>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend"></div>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default">
         </div>
-        <input type="text" class="form-control" aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-default">
     </div>
 
-    <footer>
-        <div class="footer navbar-dark bg-dark">
-            <p>CyberFicha &copy</p>
+    <form class="papelPersonagem">
+        <h4>PAPEL</h4>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Solo" value="option1">
+            <label class="form-check-label" for="Solo">Solo</label>
         </div>
-    </footer>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Roqueiro" value="option2">
+            <label class="form-check-label" for="Roqueiro">Roqueiro</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Netrunner" value="option3">
+            <label class="form-check-label" for="Netrunner">Netrunner</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Tecnico" value="option4">
+            <label class="form-check-label" for="Tecnico">Técnico</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Nomade" value="option5">
+            <label class="form-check-label" for="Nomade">Nômade</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Atravessador" value="option6">
+            <label class="form-check-label" for="Atravessador">Atravessador</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Policia" value="option7">
+            <label class="form-check-label" for="Policia">Polícia</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Executivo" value="option8">
+            <label class="form-check-label" for="Executivo">Executivo</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Midia" value="option9">
+            <label class="form-check-label" for="Midia">Mídia</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Tecnomedico" value="option10">
+            <label class="form-check-label" for="Tecnomedico">Tecnomédico</label>
+        </div>
+    </form>
 
+    <div class="imagemPersonagem">
+        <div class="card align-items-center" style="width: 18rem;">
+            <img src="images/exemplo.jpg" class="card-img-top" alt="Imagem do personagem">
+            <div class="card-body">
+                <button class="btn btn-primary">Enviar imagem</button>
+            </div>
+        </div>
+    </div>
+
+    <form class="rolagem">
+        <div class="form-row align-items-center">
+            <div class="col-auto my-1">
+                <button type="submit" class="btn btn-primary">Rolar dados</button>
+            </div>
+            <div class="col-sm-2 my-1">
+                <span>Rolagem:</span>
+                <input type="text" class="form-control" id="inlineFormInputName" placeholder="">
+            </div>
+            <div class="col-sm-2 my-1">
+                <span>Rolagem Total:</span>
+                <input type="text" class="form-control" id="inlineFormInputName" placeholder="">
+            </div>
+        </div>
+        <div class="col-sm-1 my-1">
+            <span>Rolagem:</span>
+            <input type="text" class="form-control" id="inlineFormInputName" placeholder="">
+        </div>
+    </form>
+
+    <form class="atributosPersonagem">
+        <div class="form-row align-items-center">
+            <div class="col-sm-1 my-1">
+                <span>INT</span>
+                <input type="text" class="form-control" id="inlineFormInputName" placeholder="">
+            </div>
+
+            <div class="col-sm-1 my-1">
+                <span>REF</span>
+                <input type="text" class="form-control" id="inlineFormInputName" placeholder="">
+            </div>
+
+            <div class="col-sm-1 my-1">
+                <span>TEC</span>
+                <input type="text" class="form-control" id="inlineFormInputName" placeholder="">
+            </div>
+
+            <div class="col-sm-1 my-1">
+                <span>AuCon</span>
+                <input type="text" class="form-control" id="inlineFormInputName" placeholder="">
+            </div>
+
+            <div class="col-sm-1 my-1">
+                <span>ATR</span>
+                <input type="text" class="form-control" id="inlineFormInputName" placeholder="">
+            </div>
+
+            <div class="col-sm-1 my-1">
+                <span>SOR</span>
+                <input type="text" class="form-control" id="inlineFormInputName" placeholder="">
+            </div>
+
+            <div class="col-sm-1 my-1">
+                <span>MOV</span>
+                <input type="text" class="form-control" id="inlineFormInputName" placeholder="">
+            </div>
+
+            <div class="col-sm-1 my-1">
+                <span>TCO</span>
+                <input type="text" class="form-control" id="inlineFormInputName" placeholder="">
+            </div>
+
+            <div class="col-sm-1 my-1">
+                <span>EMP</span>
+                <input type="text" class="form-control" id="inlineFormInputName" placeholder="">
+            </div>
+
+            <div class="col-sm-1 my-1">
+                <span>Correr</span>
+                <input type="text" class="form-control" id="inlineFormInputName" placeholder="">
+            </div>
+
+            <div class="col-sm-1 my-1">
+                <span>Saltar</span>
+                <input type="text" class="form-control" id="inlineFormInputName" placeholder="">
+            </div>
+
+            <div class="col-sm-1 my-1">
+                <span>Levantar</span>
+                <input type="text" class="form-control" id="inlineFormInputName" placeholder="">
+            </div>
+        </div>
+    </form>
 
     <script src="js/jquery.js"></script>
     <script src="styles/bootstrap/js/bootstrap.js"></script>
