@@ -2,11 +2,11 @@
     margin-left: 10px;
 }
 
-.criarCampanhaInput, .criarContaInput {
+.criarCampanhaInput, .criarContaInput, .loginInput {
     max-width: 50%;
 }
 
-.criarCampanhasForm, .formCriarConta {
+.criarCampanhasForm, .formCriarConta, .formLogin {
     margin-top: 2em;
     margin-right: 5em;
 }
