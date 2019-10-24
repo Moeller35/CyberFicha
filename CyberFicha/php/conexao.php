@@ -4,7 +4,7 @@ class Conexao {
     private $host = "localhost";
     private $usuario = "root";
     private $senha = "";
-    private $banco = "exercicios_lp3";
+    private $banco = "mydb";
 
     private $conn;
 
