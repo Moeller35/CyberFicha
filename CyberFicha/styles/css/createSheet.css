@@ -1,27 +1,33 @@
 .atributo, .papel{
-    margin-left: 10px;
-    padding: 5px;
+  margin-left: 10px;
+  padding: 5px;
 }
 
 .atributosPersonagem {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .rolagem {
-    margin: 3em;
-    margin-right: 10em;
+  margin: 3em;
+  margin-right: 10em;
 }
 
 .imagemPersonagem {
-    display: flex;
-    justify-content: start;
+  display: flex;
+  justify-content: start;
 }
 
 .nomePersonagem {
-    margin-top: 1em;
+  margin-top: 1em;
 }
 
 .papelPersonagem {
-    margin-top: 1em;
+  margin-top: 1em;
+}
+
+.protecao {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 50%;
 }

@@ -1,6 +1,5 @@
 <?php
-
-class Conexao {
+  class Conexao {
     private $host = "localhost";
     private $usuario = "root";
     private $senha = "";
@@ -28,5 +27,5 @@ class Conexao {
             $this->close();
         }
     }
-}
+  }
 ?>

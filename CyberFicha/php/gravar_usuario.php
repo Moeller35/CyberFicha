@@ -1,16 +1,17 @@
 <?php
-$dados = $_POST;
+  $dados = $_POST;
 
-$nome = $dados['nome'];
-$email = $dados['email'];
-$senha = md5($dados['senha']);
-$nickname = $dados['nickname'];
+  $nome = $dados['nome'];
+  $email = $dados['email'];
+  $senha = md5($dados['senha']);
+  $nickname = $dados['nickname'];
 
-$sql = "INSERT INTO usuario (nome, email, senha, nickname) VALUES ('$nome', '$email', '$senha', '$nickname')";
+  $sql = "INSERT INTO usuario (nome, email, senha, nickname) VALUES ('$nome', '$email', '$senha', '$nickname')";
 
-include_once 'conexao.php';
-$conexao = new Conexao();
-$conexao->execute($sql);
+  include_once 'conexao.php';
+  $conexao = new Conexao();
+  $conexao->execute($sql);
 
-echo "<script> alert('Formulário foi salvo com sucesso'); 
-      window.location.href = '../index.php'</script>";
+  echo "<script> alert('Formulário foi salvo com sucesso'); 
+        window.location.href = '../index.php'</script>";
+?>
