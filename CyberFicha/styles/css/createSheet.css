@@ -31,3 +31,11 @@
   margin-left: 10px;
   width: 50%;
 }
+
+.vitalidade{
+  width: 10%;
+}
+
+.vit, .mtc {
+  margin: 10px;
+}
