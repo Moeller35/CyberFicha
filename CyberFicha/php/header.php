@@ -14,7 +14,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="create_sheet.php">Criar Ficha</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Minhas Fichas</a>
+                    <a class="dropdown-item" href="listar_fichas.php">Minhas Fichas</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -25,7 +25,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="criar_campanha.php">Criar Campanha</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Minhas Campanhas</a>
+                    <a class="dropdown-item" href="listar_campanha.php">Minhas Campanhas</a>
                 </div>
             </li>
             <li class="nav-item">
