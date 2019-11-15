@@ -3,7 +3,7 @@
 
   $nome = $dados['nome'];
   $email = $dados['email'];
-  $senha = md5($dados['senha']);
+  $senha = $dados['senha'];
   $nickname = $dados['nickname'];
 
   $sql = "INSERT INTO usuario (nome, email, senha, nickname) VALUES ('$nome', '$email', '$senha', '$nickname')";

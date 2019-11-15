@@ -6,7 +6,7 @@
   $usuario = $_POST['nickname'];
   $senha = $_POST['senha'];
 
-  $result = $conexao->execute("SELECT * FROM usuario WHERE nickname = '$usuario' AND senha = MD5('$senha')");
+  $result = $conexao->execute("SELECT * FROM usuario WHERE nickname = '$usuario' AND senha = '$senha'");
 
   if(mysqli_num_rows ($result) > 0 ) {
     $_SESSION['nickname'] = $usuario;

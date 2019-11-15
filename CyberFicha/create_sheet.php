@@ -38,6 +38,8 @@
     <input class="form-control mtc" type="text" placeholder="MTC">
   </form>
 
+  <?php include "php/layout/pericias.php" ?>
+
   <script src="js/jquery.js"></script>
   <script src="styles/bootstrap/js/bootstrap.js"></script>
 </body>

@@ -1,5 +1,5 @@
 <form class="atributosPersonagem">
-  <h4 class="titulo">Atributos</h4>
+  <h4 class="titulo">ATRIBUTOS</h4>
   <div class="form-row align-items-center">
     <div class="col-sm-1 my-1 atributo">
       <span>INT</span>

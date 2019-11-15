@@ -1,4 +1,4 @@
-.atributo, .papel{
+.atributo, .papel, .periciasPersonagens{
   margin-left: 10px;
   padding: 5px;
 }
@@ -6,6 +6,16 @@
 .atributosPersonagem {
   display: flex;
   flex-wrap: wrap;
+}
+
+.periciasPersonagens {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.pericia2 {
+  display: inline-flex;
+  flex-direction: column;
 }
 
 .rolagem {
@@ -38,4 +48,8 @@
 
 .vit, .mtc {
   margin: 10px;
+}
+
+h4, .subtitulo {
+  font-weight: bold;
 }
