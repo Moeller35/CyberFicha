@@ -11,6 +11,15 @@
 <body>
   <?php include "php/header.php"?>
 
+  <?php
+    $sql = "SELECT * FROM campanha";
+
+    include_once 'php/conexao.php';
+    $conexao = new Conexao();
+
+    $campanhas = $conexao->execute($sql);
+  ?>
+
   <h1 class="container tituloCampanhas">Minhas Campanhas</h1>
   
   <table class="table table-hover table-bordered container tabelaFicha">
@@ -18,28 +27,27 @@
     <tr>
       <th scope="col">Nº</th>
       <th scope="col">Nome da campanha</th>
-      <th scope="col">Opções</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Excluir</th>
     </tr>
   </thead>
   <tbody>
+    <?php 
+      while($campanha = $campanhas->fetch_array()) { 
+    ?>
     <tr>
-      <th scope="row">1</th>
-      <td>Assalto ao Meridial Plaza</td>
-      <td type="button" class="btn btn-primary">Ediar</td>
-      <td type="button" class="btn btn-danger">Excluir</td>
+      <th scope="row"><?php echo $campanha["id"]; ?></th>
+      <td><?php echo $campanha["nome_campanha"]; ?></td>
+      <td>
+        <a href="#"
+        class="btn btn-primary">Editar</a>
+      </td>
+      <td>
+        <a href= "php/campanha_excluir.php?id=<?php echo $campanha["id"]; ?>"
+          class="btn btn-danger">Excluir</a>
+      </td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Em busca do chip da imortalidade</td>
-      <td type="button" class="btn btn-primary">Ediar</td>
-      <td type="button" class="btn btn-danger">Excluir</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Situação de risco: Invasão</td>
-      <td type="button" class="btn btn-primary">Ediar</td>
-      <td type="button" class="btn btn-danger">Excluir</td>
-    </tr>
+    <?php } ?>
   </tbody>
 </table>
 

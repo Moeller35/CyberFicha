@@ -12,6 +12,6 @@
   $conexao = new Conexao();
   $conexao->execute($sql);
 
-  echo "<script> alert('Formulário foi salvo com sucesso'); 
+  echo "<script> alert('Usuário cadastrado com sucesso'); 
         window.location.href = '../index.php'</script>";
 ?>
