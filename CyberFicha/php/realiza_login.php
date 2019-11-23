@@ -9,9 +9,14 @@
   $result = $conexao->execute("SELECT * FROM usuario WHERE nickname = '$usuario' AND senha = '$senha'");
 
   if(mysqli_num_rows ($result) > 0 ) {
+
+    $dados_usuario = mysqli_fetch_assoc($result);
+
+    $_SESSION['id'] = $dados_usuario['id'];
     $_SESSION['nickname'] = $usuario;
     $_SESSION['senha'] = $senha;
-    header('location:../index.php');
+    echo "<script> alert('Login realizado com sucesso'); 
+        window.location.href = '../index.php'</script>";
   } else{
       unset ($_SESSION['nickname']);
       unset ($_SESSION['senha']);

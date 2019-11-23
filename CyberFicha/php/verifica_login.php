@@ -7,5 +7,6 @@
     header('location:../login.php');
     }
   
+  $user = $_SESSION['id'];
   $logado = $_SESSION['nickname'];
 ?>
