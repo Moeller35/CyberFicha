@@ -15,10 +15,10 @@
 <body>
   <?php include "php/header.php"?>
 
-  <div class="nomePersonagem">
+  <div class="nomePersonagem" action="php/gravar_ficha.php" method="POST">
     <h4 class="titulo">NOME</h4>
       <div class="col-sm-3 my-1">
-          <input type="text" class="form-control" aria-label="Sizing example input"
+          <input name="nome" type="text" class="form-control" aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-default">
       </div>
   </div>
@@ -31,11 +31,11 @@
 
   <?php include "php/layout/protecao.php"?>
 
-  <form class="vitalidade">
+  <form class="vitalidade" action="php/gravar_ficha.php" method="POST">
     <span class="vit">VIT</span>
-    <input class="form-control vit" type="text" placeholder="VIT">
+    <input class="form-control vit" type="text" placeholder="VIT" name="vit">
     <span class="mtc">MTC</span>
-    <input class="form-control mtc" type="text" placeholder="MTC">
+    <input class="form-control mtc" type="text" placeholder="MTC" name="mtc">
   </form>
 
   <?php include "php/layout/pericias.php" ?>

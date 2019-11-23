@@ -1,4 +1,4 @@
-<table class="table protecao">
+<table class="table protecao" action="../php/gravar_ficha.php" method="POST">
   <thead class="thead-dark">
     <tr>
       <th scope="col">Localização</th>
@@ -13,12 +13,12 @@
   <tbody>
     <tr>
       <th class="table-dark" scope="row">Blindagem PB</th>
-      <td><input class="form-control" type="text"></td>
-      <td><input class="form-control" type="text"></td>
-      <td><input class="form-control" type="text"></td>
-      <td><input class="form-control" type="text"></td>
-      <td><input class="form-control" type="text"></td>
-      <td><input class="form-control" type="text"></td>
+      <td><input class="form-control" type="text" name="cabeca"></td>
+      <td><input class="form-control" type="text" name="torso"></td>
+      <td><input class="form-control" type="text" name="braco-d"></td>
+      <td><input class="form-control" type="text" name="braco-e"></td>
+      <td><input class="form-control" type="text" name="perna-d"></td>
+      <td><input class="form-control" type="text" name="perna-e"></td>
     </tr>
   </tbody>
 </table>
