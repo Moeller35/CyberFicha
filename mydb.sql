@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 24-Out-2019 às 02:38
+-- Generation Time: 24-Nov-2019 às 14:54
 -- Versão do servidor: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -30,8 +30,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `atratividade` (
   `id` int(11) NOT NULL,
-  `cuidados_pessoais` varchar(45) NOT NULL,
-  `roupa_estilo` varchar(45) NOT NULL,
+  `cuidados_pessoais` varchar(45) DEFAULT NULL,
+  `roupa_estilo` varchar(45) DEFAULT NULL,
   `ficha_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -43,11 +43,11 @@ CREATE TABLE `atratividade` (
 
 CREATE TABLE `auto_controle` (
   `id` int(11) NOT NULL,
-  `interrogatorio` varchar(45) NOT NULL,
-  `intimidacao` varchar(45) NOT NULL,
-  `oratoria` varchar(45) NOT NULL,
-  `resistencia` varchar(45) NOT NULL,
-  `manha` varchar(45) NOT NULL,
+  `interrogatorio` varchar(45) DEFAULT NULL,
+  `intimidacao` varchar(45) DEFAULT NULL,
+  `oratoria` varchar(45) DEFAULT NULL,
+  `resistencia` varchar(45) DEFAULT NULL,
+  `manha` varchar(45) DEFAULT NULL,
   `ficha_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -72,13 +72,13 @@ CREATE TABLE `campanha` (
 
 CREATE TABLE `empatia` (
   `id` int(11) NOT NULL,
-  `percepcao` varchar(45) NOT NULL,
-  `entrevista` varchar(45) NOT NULL,
-  `lideranca` varchar(45) NOT NULL,
-  `seducao` varchar(45) NOT NULL,
-  `trato_social` varchar(45) NOT NULL,
-  `persuacao_labia` varchar(45) NOT NULL,
-  `atuacao` varchar(45) NOT NULL,
+  `percepcao` varchar(45) DEFAULT NULL,
+  `entrevista` varchar(45) DEFAULT NULL,
+  `lideranca` varchar(45) DEFAULT NULL,
+  `seducao` varchar(45) DEFAULT NULL,
+  `trato_social` varchar(45) DEFAULT NULL,
+  `persuacao_labia` varchar(45) DEFAULT NULL,
+  `atuacao` varchar(45) DEFAULT NULL,
   `ficha_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -92,13 +92,30 @@ CREATE TABLE `ficha` (
   `id` int(11) NOT NULL,
   `nome_personagem` varchar(45) NOT NULL,
   `papel` int(11) NOT NULL,
+  `inteligencia` int(11) NOT NULL,
+  `ref` int(11) NOT NULL,
+  `tec` int(11) NOT NULL,
+  `aucon` int(11) NOT NULL,
+  `atr` int(11) NOT NULL,
+  `sor` int(11) NOT NULL,
+  `mov` int(11) NOT NULL,
+  `tco` int(11) NOT NULL,
+  `emp` int(11) NOT NULL,
+  `correr` int(11) NOT NULL,
+  `saltar` int(11) NOT NULL,
+  `levantar` int(11) NOT NULL,
+  `cabeca` int(11) DEFAULT NULL,
+  `torso` int(11) DEFAULT NULL,
+  `bracod` int(11) DEFAULT NULL,
+  `bracoe` int(11) DEFAULT NULL,
+  `pernad` int(11) DEFAULT NULL,
+  `pernae` int(11) DEFAULT NULL,
   `vit` varchar(10) NOT NULL,
   `mtc` varchar(10) NOT NULL,
-  `equipamentos` varchar(500) NOT NULL,
+  `equipamentos` varchar(500) DEFAULT NULL,
   `armas` varchar(500) DEFAULT NULL,
-  `pontos_personagem` int(11) NOT NULL,
-  `implantes` text NOT NULL,
-  `rep` varchar(45) NOT NULL,
+  `implantes` text,
+  `rep` varchar(45) DEFAULT NULL,
   `usuario_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -121,16 +138,16 @@ CREATE TABLE `ficha_campanha` (
 
 CREATE TABLE `habilidades_especiais` (
   `id` int(11) NOT NULL,
-  `autoridade` varchar(45) NOT NULL,
-  `lideranca_carismatica` varchar(45) NOT NULL,
-  `nocao_combate` varchar(45) NOT NULL,
-  `credibilidade` varchar(45) NOT NULL,
-  `familia` varchar(45) NOT NULL,
-  `interface` varchar(45) NOT NULL,
-  `reparos_improvisados` varchar(45) NOT NULL,
-  `tecnologia_medica` varchar(45) NOT NULL,
-  `recursos` varchar(45) NOT NULL,
-  `negociar` varchar(45) NOT NULL,
+  `autoridade` varchar(45) DEFAULT NULL,
+  `lideranca_carismatica` varchar(45) DEFAULT NULL,
+  `nocao_combate` varchar(45) DEFAULT NULL,
+  `credibilidade` varchar(45) DEFAULT NULL,
+  `familia` varchar(45) DEFAULT NULL,
+  `interface` varchar(45) DEFAULT NULL,
+  `reparos_improvisados` varchar(45) DEFAULT NULL,
+  `tecnologia_medica` varchar(45) DEFAULT NULL,
+  `recursos` varchar(45) DEFAULT NULL,
+  `negociar` varchar(45) DEFAULT NULL,
   `ficha_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -154,31 +171,31 @@ CREATE TABLE `imagem_personagem` (
 
 CREATE TABLE `inteligencia` (
   `id` int(11) NOT NULL,
-  `contabilidade` varchar(45) NOT NULL,
-  `antropologia` varchar(45) NOT NULL,
-  `atencao` varchar(45) NOT NULL,
-  `biologia` varchar(45) NOT NULL,
-  `botanica` varchar(45) NOT NULL,
-  `quimica` varchar(45) NOT NULL,
-  `composicao` varchar(45) NOT NULL,
+  `contabilidade` varchar(45) DEFAULT NULL,
+  `antropologia` varchar(45) DEFAULT NULL,
+  `atencao` varchar(45) DEFAULT NULL,
+  `biologia` varchar(45) DEFAULT NULL,
+  `botanica` varchar(45) DEFAULT NULL,
+  `quimica` varchar(45) DEFAULT NULL,
+  `composicao` varchar(45) DEFAULT NULL,
   `diagnose` varchar(45) NOT NULL,
-  `educacao` varchar(45) NOT NULL,
-  `especialista` varchar(45) NOT NULL,
-  `jogo` varchar(45) NOT NULL,
-  `geologia` varchar(45) NOT NULL,
-  `esconder` varchar(45) NOT NULL,
-  `historia` varchar(45) NOT NULL,
-  `idioma` varchar(45) NOT NULL,
-  `biblioteca` varchar(45) NOT NULL,
-  `matematica` varchar(45) NOT NULL,
-  `fisica` varchar(45) NOT NULL,
-  `programacao` varchar(45) NOT NULL,
-  `rastreamento` varchar(45) NOT NULL,
-  `acoes` varchar(45) NOT NULL,
-  `sistemas` varchar(45) NOT NULL,
-  `pedagogia` varchar(45) NOT NULL,
-  `sobrevivencia` varchar(45) NOT NULL,
-  `zoologia` varchar(45) NOT NULL,
+  `educacao` varchar(45) DEFAULT NULL,
+  `especialista` varchar(45) DEFAULT NULL,
+  `jogo` varchar(45) DEFAULT NULL,
+  `geologia` varchar(45) DEFAULT NULL,
+  `esconder` varchar(45) DEFAULT NULL,
+  `historia` varchar(45) DEFAULT NULL,
+  `idioma` varchar(45) DEFAULT NULL,
+  `biblioteca` varchar(45) DEFAULT NULL,
+  `matematica` varchar(45) DEFAULT NULL,
+  `fisica` varchar(45) DEFAULT NULL,
+  `programacao` varchar(45) DEFAULT NULL,
+  `rastreamento` varchar(45) DEFAULT NULL,
+  `acoes` varchar(45) DEFAULT NULL,
+  `sistemas` varchar(45) DEFAULT NULL,
+  `pedagogia` varchar(45) DEFAULT NULL,
+  `sobrevivencia` varchar(45) DEFAULT NULL,
+  `zoologia` varchar(45) DEFAULT NULL,
   `ficha_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -190,27 +207,27 @@ CREATE TABLE `inteligencia` (
 
 CREATE TABLE `reflexos` (
   `id` int(11) NOT NULL,
-  `arqueirismo` varchar(45) NOT NULL,
-  `atletismo` varchar(45) NOT NULL,
-  `briga` varchar(45) NOT NULL,
-  `danca` varchar(45) NOT NULL,
-  `esquivar` varchar(45) NOT NULL,
-  `conducao` varchar(45) NOT NULL,
-  `esgrima` varchar(45) NOT NULL,
-  `armas_curtas` varchar(45) NOT NULL,
-  `armas_pesadas` varchar(45) NOT NULL,
-  `artes_marciais` varchar(45) NOT NULL,
-  `luta_gr` varchar(45) NOT NULL,
-  `armas_brancas` varchar(45) NOT NULL,
-  `motocicleta` varchar(45) NOT NULL,
-  `op_maq_peseda` varchar(45) NOT NULL,
-  `pilotagem_giro` varchar(45) NOT NULL,
-  `asa_fixa` varchar(45) NOT NULL,
-  `dirigivel` varchar(45) NOT NULL,
-  `veic_imp_vet` varchar(45) NOT NULL,
-  `fuzil` varchar(45) NOT NULL,
-  `furtividade` varchar(45) NOT NULL,
-  `submetralhadora` varchar(45) NOT NULL,
+  `arqueirismo` varchar(45) DEFAULT NULL,
+  `atletismo` varchar(45) DEFAULT NULL,
+  `briga` varchar(45) DEFAULT NULL,
+  `danca` varchar(45) DEFAULT NULL,
+  `esquivar` varchar(45) DEFAULT NULL,
+  `conducao` varchar(45) DEFAULT NULL,
+  `esgrima` varchar(45) DEFAULT NULL,
+  `armas_curtas` varchar(45) DEFAULT NULL,
+  `armas_pesadas` varchar(45) DEFAULT NULL,
+  `artes_marciais` varchar(45) DEFAULT NULL,
+  `luta_gr` varchar(45) DEFAULT NULL,
+  `armas_brancas` varchar(45) DEFAULT NULL,
+  `motocicleta` varchar(45) DEFAULT NULL,
+  `op_maq_peseda` varchar(45) DEFAULT NULL,
+  `pilotagem_giro` varchar(45) DEFAULT NULL,
+  `asa_fixa` varchar(45) DEFAULT NULL,
+  `dirigivel` varchar(45) DEFAULT NULL,
+  `veic_imp_vet` varchar(45) DEFAULT NULL,
+  `fuzil` varchar(45) DEFAULT NULL,
+  `furtividade` varchar(45) DEFAULT NULL,
+  `submetralhadora` varchar(45) DEFAULT NULL,
   `ficha_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -222,26 +239,26 @@ CREATE TABLE `reflexos` (
 
 CREATE TABLE `tecnica` (
   `id` int(11) NOT NULL,
-  `aerotec` varchar(45) NOT NULL,
-  `avtec` varchar(45) NOT NULL,
-  `tecnologia_basica` varchar(45) NOT NULL,
-  `tanq_criogenicos` varchar(45) NOT NULL,
-  `ciberterminal` varchar(45) NOT NULL,
-  `cibertecnologia` varchar(45) NOT NULL,
-  `demolicoes` varchar(45) NOT NULL,
-  `disfarce` varchar(45) NOT NULL,
-  `eletronica` varchar(45) NOT NULL,
-  `seguranca_eletronica` varchar(45) NOT NULL,
-  `primeiros_socorros` varchar(45) NOT NULL,
-  `falsificacao` varchar(45) NOT NULL,
-  `giro_tec` varchar(45) NOT NULL,
-  `pintura_desenho` varchar(45) NOT NULL,
-  `fotografia` varchar(45) NOT NULL,
-  `medicamentos` varchar(45) NOT NULL,
-  `arrombamentos` varchar(45) NOT NULL,
-  `punga` varchar(45) NOT NULL,
-  `instrumentos` varchar(45) NOT NULL,
-  `armeiro` varchar(45) NOT NULL,
+  `aerotec` varchar(45) DEFAULT NULL,
+  `avtec` varchar(45) DEFAULT NULL,
+  `tecnologia_basica` varchar(45) DEFAULT NULL,
+  `tanq_criogenicos` varchar(45) DEFAULT NULL,
+  `ciberterminal` varchar(45) DEFAULT NULL,
+  `cibertecnologia` varchar(45) DEFAULT NULL,
+  `demolicoes` varchar(45) DEFAULT NULL,
+  `disfarce` varchar(45) DEFAULT NULL,
+  `eletronica` varchar(45) DEFAULT NULL,
+  `seguranca_eletronica` varchar(45) DEFAULT NULL,
+  `primeiros_socorros` varchar(45) DEFAULT NULL,
+  `falsificacao` varchar(45) DEFAULT NULL,
+  `giro_tec` varchar(45) DEFAULT NULL,
+  `pintura_desenho` varchar(45) DEFAULT NULL,
+  `fotografia` varchar(45) DEFAULT NULL,
+  `medicamentos` varchar(45) DEFAULT NULL,
+  `arrombamentos` varchar(45) DEFAULT NULL,
+  `punga` varchar(45) DEFAULT NULL,
+  `instrumentos` varchar(45) DEFAULT NULL,
+  `armeiro` varchar(45) DEFAULT NULL,
   `ficha_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -253,9 +270,9 @@ CREATE TABLE `tecnica` (
 
 CREATE TABLE `tipo_corporal` (
   `id` int(11) NOT NULL,
-  `resistencia` varchar(45) NOT NULL,
-  `feitos_forca` varchar(45) NOT NULL,
-  `natacao` varchar(45) NOT NULL,
+  `resistencia` varchar(45) DEFAULT NULL,
+  `feitos_forca` varchar(45) DEFAULT NULL,
+  `natacao` varchar(45) DEFAULT NULL,
   `ficha_id` int(11) NOT NULL,
   `ficha_usuario_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -273,15 +290,6 @@ CREATE TABLE `usuario` (
   `senha` varchar(45) NOT NULL,
   `nickname` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `usuario`
---
-
-INSERT INTO `usuario` (`id`, `nome`, `email`, `senha`, `nickname`) VALUES
-(1, 'felipe', 'test@test.com', '123', 'felipe'),
-(5, 'Felipe Moeller Oliveira', 'felipemoeller1921@gmail.com', '12', 'felipe3'),
-(6, 'Dobra', 'vitorquadrosoliveira0705@gmail.com', '9bf31c7ff062936a96d3c8bd1f8f2ff3', 'felipe');
 
 -- --------------------------------------------------------
 
@@ -414,7 +422,7 @@ ALTER TABLE `auto_controle`
 -- AUTO_INCREMENT for table `campanha`
 --
 ALTER TABLE `campanha`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `empatia`
 --
@@ -424,7 +432,7 @@ ALTER TABLE `empatia`
 -- AUTO_INCREMENT for table `ficha`
 --
 ALTER TABLE `ficha`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT for table `habilidades_especiais`
 --
@@ -459,7 +467,7 @@ ALTER TABLE `tipo_corporal`
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- Constraints for dumped tables
 --
