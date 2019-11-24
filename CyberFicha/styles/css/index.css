@@ -14,3 +14,7 @@
 .tabelaFicha, .tituloCampanhas, .tituloFichas {
     margin-top: 2em;
 }
+
+.card {
+    margin: 2em;
+}
