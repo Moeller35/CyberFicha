@@ -11,6 +11,15 @@
 <body>
   <?php include "php/header.php"?>
 
+  <?php
+    $sql = "SELECT * FROM ficha";
+
+    include_once 'php/conexao.php';
+    $conexao = new Conexao();
+
+    $fichas = $conexao->execute($sql);
+  ?>
+
   <h1 class="container tituloFichas">Minhas Fichas</h1>
   
   <table class="table table-hover table-bordered container tabelaFicha">
@@ -18,34 +27,27 @@
     <tr>
       <th scope="col">Nº</th>
       <th scope="col">Nome do personagem</th>
-      <th scope="col">Opções</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Excluir</th>
     </tr>
   </thead>
-  <tbody>
+    <tbody>
+    <?php 
+      while($ficha = $fichas->fetch_array()) { 
+    ?>
     <tr>
-      <th scope="row">1</th>
-      <td>Mike Roach</td>
-      <td type="button" class="btn btn-primary">Ediar</td>
-      <td type="button" class="btn btn-danger">Excluir</td>
+      <th scope="row"><?php echo $ficha["id"]; ?></th>
+      <td><?php echo $ficha["nome_personagem"]; ?></td>
+      <td>
+        <a href="#"
+        class="btn btn-primary">Editar</a>
+      </td>
+      <td>
+        <a href= "php/ficha_excluir.php?id=<?php echo $ficha["id"]; ?>"
+          class="btn btn-danger">Excluir</a>
+      </td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>TX-36 Genesis</td>
-      <td type="button" class="btn btn-primary">Ediar</td>
-      <td type="button" class="btn btn-danger">Excluir</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Daniel Doommaw, o Campeão</td>
-      <td type="button" class="btn btn-primary">Ediar</td>
-      <td type="button" class="btn btn-danger">Excluir</td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>Yurasov "Dynamo" Petrovich</td>
-      <td type="button" class="btn btn-primary">Ediar</td>
-      <td type="button" class="btn btn-danger">Excluir</td>
-    </tr>
+    <?php } ?>
   </tbody>
 </table>
 
